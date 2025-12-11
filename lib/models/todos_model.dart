@@ -46,7 +46,10 @@ class TodosModel {
 
   String toJson() => json.encode(toMap());
 
-  factory TodosModel.fromJson(String source) => TodosModel.fromMap(json.decode(source));
+  factory TodosModel.fromJson(Map<String, dynamic> json) {
+  return TodosModel.fromMap(json);
+}
+
 
   @override
   String toString() {
